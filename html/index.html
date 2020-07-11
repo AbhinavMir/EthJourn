@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Telegraph.Network</title>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300;1,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!--link rel="stylesheet" href="../css/index.css"-->
+      <style>
+         body
+         {
+         font-family: 'Josefin Sans', sans-serif;
+         }
+         #container
+         {
+         padding : 10%;
+         }
+         a{
+         text-decoration: none;
+         color: #383838;
+         }
+         h1
+         {
+         font-weight: 'bold 700 italic';
+         font-size: 5vw;
+         }
+         .card {
+         border: ;  
+         padding: 0.5vw;
+         text-align: left;
+         background-color:white;
+         transition: ease-in 0.2s;
+         }
+         .card:hover
+         {
+         box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
+         }
+         i{
+         padding:2%;
+         transition: ease-in 0.1s;
+         }
+         i:hover{
+         transform: scale(1.5);
+         }
+         .grid-container {
+         display: grid;
+         }
+		 
+		 .button {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		}
+      </style>
+   </head>
+   <body class = "animated fadeIn">
+      <div id = "container">
+         <h1>Telegraph.Network</h1>
+         <br><br><br>
+         </h2><br>
+
+         <center>
+		  <a href="/addfile" id="button">post</a>
+         <hr>
+         <br>
+         <div id = "change"></div>
+      </div>
+      <div class="row">
+        
+         <script>
+            var request = new XMLHttpRequest()
+            
+            request.open('GET', 'https://abhi-1234.firebaseio.com/.json', true)
+            request.onload = function() {
+            var projects = JSON.parse(this.response);
+            console.log(projects);
+            if (request.status >= 200 && request.status < 400) {
+              for(_iter_ in projects)
+              {
+                  title = projects[_iter_]["title"];
+                  hash = projects[_iter_]["hash"];
+                  url = "https://ipfs.infura.io/ipfs/"+hash;
+                  console.log(title, url);
+                  document.getElementById("change").innerHTML = document.getElementById("change").innerHTML + "<a href = " + url +">" +
+                  "<div class = " + "card" + ">" + "<h3>" + title + "</h3>" + "<br>" + "CID: " + "<b>"+ hash + "</b>" + "</div>" + "</a>" + "<br>" + "<br>";
+                }
+              }
+            }
+            
+            request.send()
+            
+         </script>
+      </div>
+      </div>
+   </body>
+</html>
+
