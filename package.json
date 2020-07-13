@@ -2,15 +2,17 @@
   "name": "tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "ipfsbackend.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ipfsbackend.js"
   },
-  "author": "",
+  "author": "abhinavmir <atg271@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "firebase": "^7.16.0",
     "fs": "0.0.1-security",
     "ipfs-api": "^26.1.2"
-  }
+  },
+  "repository": "https://github.com/AbhinavMir/ipfs-upload-from-html"
 }
