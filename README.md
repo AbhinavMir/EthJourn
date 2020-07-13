@@ -23,7 +23,8 @@ IPFS can also help you be anonymous. It is also decentralized, thus tamper proof
 <li>Upon tipping, the tip value is transferred to the owner of the Smart Contract.
 </ul>
 <hr>
-## Progress
+
+# Progress <br>
 1. Completed editor, file pushes to IPFS<br>
 2. Connected to Ethereum Testnet<br>
 3. Developed a express app to do all that<br>
