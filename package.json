@@ -12,7 +12,8 @@
     "express": "^4.17.1",
     "firebase": "^7.16.0",
     "fs": "0.0.1-security",
-    "ipfs-api": "^26.1.2"
+    "ipfs-api": "^26.1.2",
+    "web3": "^1.2.9"
   },
   "repository": "https://github.com/AbhinavMir/ipfs-upload-from-html"
 }

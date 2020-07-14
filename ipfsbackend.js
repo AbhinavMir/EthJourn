@@ -37,19 +37,21 @@ app.get('/post', function(req, res) {
 });
 
 app.post('/submit-form', (req, res) => {
-  const username = req.body.username
-  let testBuffer = new Buffer(username);
+  res.sendFile(path.join(__dirname + '/html/progress.html'));
+  const text = req.body.text;
+  const title = req.body.title;	
+  let testBuffer = new Buffer(text);
   ipfs.files.add(testBuffer, function (err, file) {
 	  
       if (err) {console.log(err);}
       console.log(file)
 	  const hash = file[0]['hash']
-	  firebase.database().ref().set({
-	      title: "title",
-	      hash: "hash"
+	  firebase.database().ref().push({
+	      title: title,
+	      hash: hash
 	    });
 	})
-  res.end()
+	//return res.redirect('/');
 })
 
 
