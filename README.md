@@ -2,7 +2,7 @@
 
 Deployed to https://frozen-beyond-32806.herokuapp.com/ without web3JS
 <br>
-Paper Can be found [here](https://www.researchgate.net/publication/344692172_EthJourn_A_framework_for_incentive-driven_decentralized_journalism_network_on_Blockchain_and_P2P_storage).
+
 ### Idea
 Build an IPFS storage based blog that is powered by CloudFlare IPFS. The storage will be decentralized, however the hash of the content will be stored in a Smart Contract with the title. This title will be fetched by web3 in the React frontend, and clicking on the title will take you to a SPA that serves the IPFS content via Cloudflare Gateway and parses the markdown. When the reader clicks on "tip", the tip is sent to the owner of the smart contract.
 
@@ -32,3 +32,9 @@ IPFS can also help you be anonymous. It is also decentralized, thus tamper proof
 2. Connected to Ethereum Testnet<br>
 3. Developed a express app to do all that<br>
 4. Can list from Smart Contract<br>
+
+
+
+
+
+Paper Can be found [here](https://www.researchgate.net/publication/344692172_EthJourn_A_framework_for_incentive-driven_decentralized_journalism_network_on_Blockchain_and_P2P_storage).
